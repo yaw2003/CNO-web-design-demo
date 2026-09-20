@@ -117,14 +117,6 @@ a {
   position: relative; 
 }
 
-.hero:after { 
-  background: linear-gradient(90deg, transparent 0 72%, rgba(201,211,197,.35) 72%); 
-  content: ""; 
-  inset: 0; 
-  pointer-events: none; 
-  position: absolute; 
-}
-
 /* .hero .container { z-index: 1; } */
 
 .hero-orbit { 
@@ -272,7 +264,6 @@ h1 em, h2 em {
 
 .portrait {
   display: block; 
-  filter: saturate(.9);
   height: 500px; 
   object-fit: cover; 
   object-position: center top; 
