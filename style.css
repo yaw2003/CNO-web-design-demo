@@ -936,7 +936,7 @@ body { overflow-x: hidden; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 20px; }
   .hero-note { align-items: flex-start; }
   .portrait-wrap { width: calc(100% - 12px); }
-  .portrait { height: 400px; }
+  .portrait { height: 500px; }
   .portrait-caption { padding: 12px 14px; }
   .portrait-caption span { font-size: .6rem; }
   .cv-entry { grid-template-columns: 1fr; gap: 5px; }
