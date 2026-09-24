@@ -749,7 +749,7 @@ h2 {
 }
 
 .quote-section { 
-  background: var(--gold); 
+  /* background: var(--gold);  */
   color: var(--forest-deep); 
   padding: 100px 0 110px; 
   text-align: center; 
