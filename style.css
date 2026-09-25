@@ -34,7 +34,9 @@ a {
   border-bottom: 1px solid rgba(6, 171, 89, 0.1); 
   border-radius: 20px; 
   margin-top: 10px; margin-left: 10px; 
-  margin-right: 10px; 
+  margin-right: 10px;
+  padding-bottom: 20px; 
+  padding-top: 20px;
   position: sticky; 
   top: 10px; 
   z-index: 10; }
@@ -781,6 +783,13 @@ h2 {
   color: #fff0c9; 
   margin: 0 8px; 
 }
+
+/* Custom CSS to apply the blur effect */
+.img-blur {
+  filter: blur(2px);
+  -webkit-filter: blur(2px); /* For older WebKit browsers */
+}
+
 
 .contact-section { 
   background: var(--forest-deep); 
