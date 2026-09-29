@@ -871,13 +871,6 @@ h2 {
 }
 
 
-/* Custom CSS to apply the blur effect */
-.img-blur {
-  filter: blur(2px);
-  -webkit-filter: blur(2px); /* For older WebKit browsers */
-}
-
-
 .contact-section { 
   background: var(--forest-deep); 
   padding: 112px 0; 
@@ -1092,7 +1085,7 @@ body { overflow-x: hidden; }
   .quote-image:first-child img {
     height: 175px;
   }
-  .agric-img {height: 10vh;}
+  
   .navbar-brand { font-size: .67rem; gap: 7px; }
   .navbar-brand img { height: 32px; width: 32px; }
   .navbar-brand span { font-size: .6rem; }
@@ -1295,5 +1288,24 @@ body { overflow-x: hidden; }
 #whatsapp-button a:hover img {
   transform: scale(1.1);
   transition: transform 0.6s ease;
+}
+
+/* Keep every agriculture slide the same height on mobile. */
+@media (max-width: 767px) {
+  #carousel4 .carousel-inner {
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  #carousel4 .carousel-item {
+    height: 100%;
+  }
+
+  #carousel4 .carousel-item img {
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    width: 100%;
+  }
 }
 
