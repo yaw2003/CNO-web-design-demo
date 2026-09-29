@@ -941,6 +941,7 @@ body { overflow-x: hidden; }
 }
 
 @media (max-width: 480px) {
+  .site-nav{ height: 4rem; }
   .navbar-brand { font-size: .67rem; gap: 7px; }
   .navbar-brand img { height: 45px; width: 34px }
   .navbar-brand span { font-size: .6rem; }
