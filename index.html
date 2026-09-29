@@ -333,23 +333,58 @@
       </div>
     </section>
 
-    <!-- card quotes -->
-    <!-- <section class="quote-section">
-      <div class="container"><div class="quote-mark">“</div><blockquote>Education should do more than transfer information. It should develop thoughtful people who can solve problems, serve others, and contribute meaningfully to society.</blockquote><p class="quote-byline">Charles Nyarko Osei <span>·</span> Guiding philosophy</p></div>
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./imgs/alse.jpg" class="d-block  p-2 border" alt="A library lined with books" style="width: 100%; height: 50%;" />
+    <!-- quotes section -->
+    <section class="quote-section" id="quotes" aria-label="Guiding philosophy quotes">
+      <div class="container quote-layout">
+        <div id="quoteCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="quote-copy">
+                <p class="section-label">A guiding philosophy</p>
+                <div class="quote-mark" aria-hidden="true">“</div>
+                <blockquote class="blockquote">Education should do more than transfer information. It should develop thoughtful people who can solve problems, serve others, and contribute meaningfully to society.</blockquote>
+                <div class="quote-attribution">
+                  <img class="quote-author-photo" src="./imgs/Charles.jpeg" alt="" loading="lazy">
+                  <p class="quote-byline">Charles Nyarko Osei <span aria-hidden="true">·</span> Guiding philosophy</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="./imgs/Earth%20%F0%9F%8C%8E.jpg" class="d-block w-100 h-25 p-2 border" alt="A globe beside a stack of books" style="width: 100%; height: 50%;" />
-          </div>
-          <div class="carousel-item">
-            <img src="./imgs/books.jpg" class="d-block w-100 h-25 p-2 border" alt="..." style="width: 100%; height: 50%;" >
+          <!-- Copy this template into .carousel-inner for each new quote. Keep "active" on the first slide only. -->
+          <template id="quote-slide-template">
+            <div class="carousel-item">
+              <div class="quote-copy">
+                <p class="section-label">Quote category</p>
+                <div class="quote-mark" aria-hidden="true">“</div>
+                <blockquote class="blockquote">Write the new quote here.</blockquote>
+                <div class="quote-attribution">
+                  <img class="quote-author-photo" src="./imgs/Charles.jpeg" alt="" loading="lazy">
+                  <p class="quote-byline">Quote author</p>
+                </div>
+              </div>
+            </div>
+          </template>
+          <div class="quote-carousel-controls">
+            <button class="quote-slide-button" type="button" data-bs-target="#quoteCarousel" data-bs-slide="prev" aria-label="Previous quote">← Previous</button>
+            <button class="quote-slide-button" type="button" data-bs-target="#quoteCarousel" data-bs-slide="next" aria-label="Next quote">Next →</button>
           </div>
         </div>
+        <div class="quote-gallery" role="group" aria-label="Images reflecting education and learning">
+          <figure class="quote-image">
+            <img src="./imgs/alse.jpg" alt="Warm light falling between library bookshelves" loading="lazy">
+            <figcaption>Learning creates possibility</figcaption>
+          </figure>
+          <figure class="quote-image">
+            <img src="./imgs/Earth%20%F0%9F%8C%8E.jpg" alt="A globe resting on books about education" loading="lazy">
+            <figcaption>Education</figcaption>
+          </figure>
+          <figure class="quote-image">
+            <img src="./imgs/books.jpg" alt="An open book among a stack of books" loading="lazy">
+            <figcaption>Curiosity</figcaption>
+          </figure>
+        </div>
       </div>
-    </section> -->
+    </section>
 
     
 

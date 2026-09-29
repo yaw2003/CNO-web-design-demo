@@ -33,6 +33,7 @@ a {
   -webkit-backdrop-filter: blur(14px) saturate(1.15); 
   border-bottom: 1px solid rgba(6, 171, 89, 0.1); 
   border-radius: 10px; 
+  box-shadow: 0 8px 22px rgba(18, 63, 52, .10), 0 2px 5px rgba(23, 35, 29, .06);
   margin-top: 10px; margin-left: 10px; 
   margin-right: 10px;
   /* padding-bottom: 0.01rem;  */
@@ -751,39 +752,124 @@ h2 {
   font-weight: 600; 
 }
 
-.quote-section { 
-  /* background: var(--gold);  */
-  color: var(--forest-deep); 
-  padding: 100px 0 110px; 
-  text-align: center; 
+/* Quote section */
+.quote-section {
+  background: #f3f0e7;
+  color: var(--forest-deep);
+  padding: 96px 0;
 }
 
-.quote-mark { 
-  font-family: var(--serif); 
-  font-size: 5.5rem; 
-  height: 65px; 
-  line-height: 1; 
+.quote-layout {
+  align-items: center;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr;
 }
 
-.blockquote { 
-  font-family: var(--serif); 
-  font-size: clamp(1.65rem, 3vw, 2.8rem); 
-  line-height: 1.25; 
-  margin: 0 auto 25px; 
-  max-width: 890px; 
+.quote-copy {
+  max-width: 650px;
 }
 
-.quote-byline { 
-  font-size: .7rem; 
-  font-weight: 700; 
-  letter-spacing: .14em; 
-  text-transform: uppercase; 
+.quote-copy .section-label {
+  margin-bottom: 10px;
 }
 
-.quote-byline span { 
-  color: #fff0c9; 
-  margin: 0 8px; 
+.quote-mark {
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 4rem;
+  height: 52px;
+  line-height: 1;
 }
+
+.blockquote {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  line-height: 1.3;
+  margin: 0 0 24px;
+}
+
+.quote-attribution {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+.quote-author-photo {
+  border-radius: 50%;
+  height: 48px;
+  object-fit: cover;
+  width: 48px;
+}
+
+.quote-byline {
+  color: #65756a;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.quote-byline span {
+  color: var(--gold);
+  margin: 0 8px;
+}
+
+/* Buttons for moving between quotes */
+.quote-carousel-controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.quote-slide-button {
+  background: transparent;
+  border: 1px solid rgba(18, 63, 52, .25);
+  border-radius: 4px;
+  color: var(--forest);
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.quote-slide-button:hover {
+  background: var(--forest);
+  color: var(--cream);
+}
+
+/* Quote images */
+.quote-gallery {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.quote-image {
+  margin: 0;
+}
+
+.quote-image:first-child {
+  grid-column: span 2;
+}
+
+.quote-image img {
+  border-radius: 6px;
+  display: block;
+  height: 110px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.quote-image:first-child img {
+  height: 220px;
+}
+
+.quote-image figcaption {
+  color: #65756a;
+  font-size: .7rem;
+  padding-top: 5px;
+}
+
 
 /* Custom CSS to apply the blur effect */
 .img-blur {
@@ -875,23 +961,69 @@ body { overflow-x: hidden; }
 
 
 @media (max-width: 991px) {
-  .site-nav { padding: 8px 0; }
-  .site-nav .container { align-items: center; display: flex; flex-wrap: wrap; }
-  .navbar-brand { max-width: calc(100% - 58px); }
-  .navbar-brand img { height: 42px; width: 42px !important; }
-  .navbar-brand span { font-size: .7rem; }
-  .navbar-toggler { margin-left: auto; }
-  .navbar-collapse {
-    /* background:blur(133, 132, 132, 0.7); */
-    /* backdrop-filter: blur(18px) saturate(1.2); */
-    /* -webkit-backdrop-filter: blur(18px) saturate(1.2); */
-    /* border-top: 1px solid rgba(23, 35, 29, .1); */
-    margin-top: 10px;
-    padding: 18px 12px 8px;
+  /* Keep the phone and tablet navigation compact. */
+  .site-nav {
+    height: auto;
+    min-height: 3.5rem;
+    padding: .25rem 0;
   }
-  .navbar-nav { align-items: stretch; gap: .2rem; width: 100%; }
-  .nav-link, .nav-cta { display: block; font-size: .7rem; }
-  .nav-cta { margin-top: 6px; padding: 9px 13px; }
+  .site-nav .container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .navbar-brand {
+    max-width: calc(100% - 58px);
+  }
+  .navbar-brand img {
+    height: 36px;
+    width: 36px;
+  }
+  .navbar-brand span {
+    font-size: .7rem;
+  }
+  .navbar-toggler {
+    align-items: center;
+    background: transparent;
+    border: 1px solid rgba(18, 63, 52, .22);
+    border-radius: 6px;
+    display: inline-flex;
+    height: 36px;
+    justify-content: center;
+    margin-left: auto;
+    padding: 0;
+    width: 36px;
+  }
+  .navbar-toggler:focus-visible {
+    box-shadow: 0 0 0 2px var(--gold);
+  }
+  .navbar-toggler-icon {
+    height: 17px;
+    width: 17px;
+  }
+  /* Add a thin line above the open menu. */
+  .navbar-collapse {
+    border-top: 1px solid rgba(23, 35, 29, .1);
+    margin-top: 4px;
+    padding: 6px 12px 4px;
+  }
+  .navbar-nav {
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+  }
+  .navbar-nav .nav-link {
+    padding-bottom: .3rem;
+    padding-top: .3rem;
+  }
+  .nav-link, .nav-cta {
+    display: block;
+    font-size: .7rem;
+  }
+  .nav-cta {
+    margin-top: 3px;
+    padding: 7px 10px;
+  }
   .hero { padding-top: 60px; }
   .portrait-wrap { margin: 25px auto 0; max-width: 460px; }
   .portrait { height: 530px; }
@@ -905,6 +1037,19 @@ body { overflow-x: hidden; }
 }
 @media (max-width: 767px) {
   .container { overflow-x: hidden; padding-left: 1.25rem; padding-right: 1.25rem; }
+  .quote-section {
+    padding: 70px 0;
+  }
+  .quote-layout {
+    gap: 30px;
+    grid-template-columns: 1fr;
+  }
+  .blockquote {
+    font-size: 1.8rem;
+  }
+  .quote-image:first-child img {
+    height: 200px;
+  }
   .hero { min-height: auto; overflow: hidden; padding: 57px 0 80px; }
   h1 { font-size: clamp(3.2rem, 16vw, 5rem); }
   .hero-copy { font-size: .95rem; }
@@ -941,9 +1086,14 @@ body { overflow-x: hidden; }
 }
 
 @media (max-width: 480px) {
-  .site-nav{ padding-top: 1rem; padding-bottom: 1rem; }
+  .blockquote {
+    font-size: 1.6rem;
+  }
+  .quote-image:first-child img {
+    height: 175px;
+  }
   .navbar-brand { font-size: .67rem; gap: 7px; }
-  .navbar-brand img { height: 45px; width: 34px }
+  .navbar-brand img { height: 32px; width: 32px; }
   .navbar-brand span { font-size: .6rem; }
   .brand-mark { height: 29px; width: 29px; }
   h1 { font-size: clamp(2.8rem, 15vw, 4.2rem); }

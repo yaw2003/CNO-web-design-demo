@@ -2,6 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const year = document.querySelector('#year');
   if (year) year.textContent = new Date().getFullYear();
 
+  // Show the quote arrows after a second quote slide is added.
+  const quoteCarousel = document.querySelector('#quoteCarousel');
+  if (quoteCarousel) {
+    const quoteSlides = quoteCarousel.querySelectorAll('.carousel-inner > .carousel-item');
+    const quoteControls = quoteCarousel.querySelector('.quote-carousel-controls');
+    if (quoteControls && quoteSlides.length < 2) quoteControls.hidden = true;
+  }
+
   const revealItems = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries, revealObserver) => {
     entries.forEach((entry) => {
