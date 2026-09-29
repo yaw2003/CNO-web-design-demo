@@ -1092,7 +1092,7 @@ body { overflow-x: hidden; }
   .quote-image:first-child img {
     height: 175px;
   }
-  .agric-img {height: 200px;}
+  .agric-img {height: 10vh;}
   .navbar-brand { font-size: .67rem; gap: 7px; }
   .navbar-brand img { height: 32px; width: 32px; }
   .navbar-brand span { font-size: .6rem; }
